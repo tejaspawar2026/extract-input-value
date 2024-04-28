@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import Heading from "./components/Heading";
+import "./App.css";
+import React from "react";
+import { useState } from "react";
 
 function App() {
+  const [data, setData] = useState(null);
+  const [print, printData] = useState(false);
+
+  function getData(val)
+  {
+    setData(val.target.value);
+    printData(false);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Heading />
+      {
+        print ?
+        <span className="output">
+          {data}
+        </span>
+        : null
+      }
+      <div className="input-group">
+        <input type="text" onChange={getData} />
+        <button onClick={() => printData(true)} className="submit-btn">Print</button>
+      </div>
     </div>
   );
 }
