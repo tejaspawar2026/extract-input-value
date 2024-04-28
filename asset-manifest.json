@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/extract-input-value/static/css/main.233afbda.css",
+    "main.js": "/extract-input-value/static/js/main.3b67f6e7.js",
+    "index.html": "/extract-input-value/index.html",
+    "main.233afbda.css.map": "/extract-input-value/static/css/main.233afbda.css.map",
+    "main.3b67f6e7.js.map": "/extract-input-value/static/js/main.3b67f6e7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.233afbda.css",
+    "static/js/main.3b67f6e7.js"
+  ]
+}
